@@ -7,7 +7,6 @@ services:
     - MONGO_DB_PASSWORD=devdb123
     
   mongo:
-    image: mongo
      environment:
     - MONGO_INITDB_ROOT_USERNAME=devdb
     - MONGO_INITDB_ROOT_PASSWORD=devdb123
