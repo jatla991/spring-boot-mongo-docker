@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  springboot:
+  environment:
+    - MONGO_DB_USERNAME=devqa
+    - MONGO_DB_PASSWORD=devqa123
+    
+  mongo:
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=devqa
+    - MONGO_INITDB_ROOT_PASSWORD=devqa123
