@@ -15,7 +15,7 @@ services:
       - mongo
     networks:
     - springnetwork
- mongo:
+  mongo:
     image: mongo
      environment:
     - MONGO_INITDB_ROOT_USERNAME=devdb
@@ -26,7 +26,7 @@ services:
     networks:
     - springnetwork
    
- volumes:
+volumes:
   mongodatadb:
     driver: local
     
