@@ -14,7 +14,7 @@ services:
     depends_on:
       - mongo
     networks:
-    - springappnetwork
+    - springnetwork
 
   mongo:
     image: mongo
@@ -22,15 +22,15 @@ services:
     - MONGO_INITDB_ROOT_USERNAME=devdb
     - MONGO_INITDB_ROOT_PASSWORD=devdb123
     volumes:
-      - mongodb:/data/db
+      - mongodatadb:/data/db
     restart: always
     networks:
-    - springappnetwork
+    - springnetwork
     
 volumes:
-  mongodb:
-    external: true
+  mongodatadb:
+    driver: local
     
 networks:
-  springappnetwork:
-    external: true
+  springnetwork:
+    driver: bridge
